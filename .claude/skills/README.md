@@ -1,34 +1,45 @@
-# Skills
+# Skills: Your Personal Operating System Commands
 
-**Purpose:** User-facing commands following the [Agent Skills](https://agentskills.io) standard for invoking workflows, tools, and features.
+**Purpose:** Slash commands that trigger multi-step workflows - your personalized interface to everything Dex can do.
+
+**The magic:** You don't code skills, you describe them. Tell Claude what you want (ideally through voice), it creates the skill. Two weeks in, you're building custom workflows. That's the point - going from "user" to "builder" through daily practice on something you actually use.
 
 ---
 
 ## What Are Skills?
 
-**Skills** are commands that extend what Claude can do - like giving Claude new capabilities. Each skill is a set of instructions for a specific workflow.
+**Skills** are commands that trigger complex workflows in seconds. Type `/daily-plan` and get your entire day organized - calendar analyzed, tasks prioritized, meeting context prepared, focus items selected. That 30-minute manual process? Now takes 5 minutes, runs every morning, gets smarter every time.
 
-Think of skills as **expert modes** for Claude. Just like you'd switch to a specialized tool for a specific job, skills equip Claude with domain expertise, workflows, and tooling for particular tasks.
+Think of skills as **expert modes** you activate on demand. Like switching to specialized tools for specific jobs, skills equip Claude with domain expertise, workflows, and context for particular tasks. The difference? These tools learn your preferences and adapt to how you work.
 
-### The Power of Skills
+### The Power of Skills: Chat Interface vs Operating System
 
-Skills transform Claude from general-purpose assistant into specialized agent:
+Skills transform Claude from conversation partner into execution engine:
 
-**Without skills:**
-- "Can you help me plan my day?"
-- Claude makes educated guesses about what you want
-- Results vary, require back-and-forth clarification
+**Chat interface (no skills):**
+- You: "Can you help me plan my day?"
+- Claude: "Sure! What do you have on your calendar today?"
+- You: *Pastes calendar* "And here are my tasks..."
+- Claude: "What are your priorities this week?"
+- You: *Explains context*
+- Result: 15 minutes of back-and-forth, manual pasting, inconsistent format
 
-**With skills:**
-- `/daily-plan`
-- Claude knows exactly what to do: check calendar, review tasks, analyze priorities, generate structured plan
-- Consistent, reliable, no explanation needed
+**Operating system (with skills):**
+- You: `/daily-plan`
+- Claude: *Checks calendar automatically, reads tasks from 03-Tasks/Tasks.md, loads week priorities, analyzes meeting attendees, pulls person context, detects commitments due today*
+- Result: Complete daily plan in 30 seconds. Same format every time. Context automatically loaded.
 
-**Real examples:**
-- `/career-coach` - Personal career coaching with 4 specialized modes (weekly reports, monthly reflections, self-reviews, promotion assessments)
+**Real examples from Dex:**
+- `/daily-plan` - Morning planning (calendar + tasks + priorities + meeting prep) in one command
+- `/career-coach` - Career coaching with 4 modes (weekly reports, self-reviews, promotion assessments, monthly reflections)
+- `/meeting-prep [person]` - Deep prep with full relationship context, past meetings, open items
+- `/week-review` - Weekly synthesis that learns from your patterns and suggests improvements
+- `/dex-improve` - System evolution workshop that turns improvement ideas into implementation plans
+
+**Anthropic skills for general productivity:**
 - `/anthropic-xlsx` - Create, edit, analyze spreadsheets with formulas and formatting
+- `/anthropic-docx` - Word documents with tracked changes and comments
 - `/product-brief` - Extract product ideas through guided questions and generate full PRD
-- `/triage` - Process inbox intelligently, extract tasks, update person pages
 
 ### How Skills Work
 

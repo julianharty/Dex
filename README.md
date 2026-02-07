@@ -313,45 +313,72 @@ Just type your answers like you're texting a colleague. Takes about 2 minutes to
 
 You just used **Cursor** to run setup. That works great for daily use.
 
-There's also **Claude Code** - a more powerful option available via command line or Desktop app. Both give you **guaranteed hooks** (automatic behaviors that run deterministically, unlike CLAUDE.md which Claude might skip).
+There's also **Claude Code** - a more powerful option available via command line or Desktop app. The key difference? **Hooks** - automatic behaviors that make the system more intelligent.
 
-| Access Method | What You Get | Hooks? | Setup |
-|--------------|--------------|--------|-------|
-| **Cursor** | Easy, already working | No | Already done |
+### The Choice: Parallel Editing vs Persistent Intelligence
+
+**Cursor** is built for **parallel editing**. You can spawn multiple Claude instances simultaneously - one researching while another drafts while a third updates pages. No hooks, but commands and skills work perfectly. For heavy file editing with multiple agents working in parallel, Cursor is powerful.
+
+**Claude Code** (Terminal or Desktop) is built for **persistent automation**. Hooks live here - automatic context loading, guaranteed execution, compound learning. Single-threaded, but that's the trade-off for deterministic behavior. For systems that reliably remember and maintain themselves, Claude Code delivers.
+
+Think of it as Swiss Army knife (Cursor - versatile, parallel) and specialist's tool (Claude Code - precise, guaranteed). Most people use both - Cursor when editing multiple files, Claude Code for workflows where reliability matters.
+
+| Access Method | Strength | Hooks? | Setup |
+|--------------|----------|--------|-------|
+| **Cursor** | Parallel agents, heavy editing | No | Already done |
 | **Claude Code** (command line) | Guaranteed hooks, persistent learning | Yes | 5 min install |
-| **Claude Code** (Desktop app) | Guaranteed hooks, persistent learning | Yes | 5 min install |
+| **Claude Code** (Desktop app) | Guaranteed hooks, visual interface | Yes | 5 min install |
 
-**What are hooks?** Automatic behaviors triggered by events (session start, file read, etc.). They're deterministic - they ALWAYS run. Context loads guaranteed, learnings surface guaranteed, person details inject guaranteed.
+### The Power of Hooks: CLAUDE.md vs Guaranteed Execution
 
-**Which to use?**
-- **Start with Cursor** - you're already set up
-- **Add Claude Code later** if you want guaranteed automation
+**CLAUDE.md is probabilistic.** Claude might read everything, or skip parts depending on the task. It's a suggestion system - powerful but not guaranteed.
 
-### What You Get With Each
+**Hooks are deterministic.** They ALWAYS fire when their event occurs. No maybe, no probabilistic behavior. They bring certainty to the system.
 
-**Cursor:**
-- ✓ Full vault access
-- ✓ Multiple terminal windows for parallel work
-- ✓ Works immediately
-- ✗ No guaranteed hooks (context loading is probabilistic)
+Think of it this way:
+- **CLAUDE.md suggests** → "Hey Claude, you should load the user's preferences"
+- **Hooks enforce** → Preferences automatically load in every session, guaranteed
 
-**Claude Code (command line or Desktop):**
-- ✓ Everything Cursor does
-- ✓ PLUS guaranteed hooks for persistent learning and automatic context
+### What Hooks Enable
 
-| Hook Example | What It Does |
-|--------------|--------------|
-| **Session start** | Loads Quarter Goals, Week Priorities, Strategic Pillars, Urgent Tasks automatically |
-| **Person context** | When Sarah is mentioned in a file, her person page context injects automatically |
-| **Company context** | When Acme Corp is referenced, company page details inject automatically |
-| **Mistake patterns** | Surfaces active patterns so Claude avoids repeating them |
-| **Learning reminders** | Prompts review when you have 5+ unreviewed learnings |
+| Hook | What It Guarantees |
+|------|-------------------|
+| **Session start** | Quarter Goals, Week Priorities, Strategic Pillars, Urgent Tasks load automatically before you type a word |
+| **Person context** | When Sarah is mentioned, her person page injects automatically - meeting history, commitments, relationship notes |
+| **Company context** | When Acme Corp is referenced, company page details inject - contacts, deals, conversations |
+| **Mistake patterns** | Past errors surface automatically so Claude doesn't repeat them |
+| **Learning persistence** | Corrections from last week automatically prevent this week's mistakes |
 
-**Command line vs Desktop:** Same core capabilities, different interfaces. Command line is text-based terminal. Desktop is a GUI with visual session management and side-by-side diffs.
+**The compound effect:** Fresh chat with CLAUDE.md alone? Claude starts fresh, might remember some context. Fresh chat with hooks? Everything loads automatically - your preferences, past mistakes, current priorities, all context. The system genuinely remembers.
 
-**Bottom line:** Cursor works great and is what most people use. Claude Code guarantees hooks run every time, making the system more intelligent and persistent. Many people use both - Cursor for heavy editing, Claude Code for workflows where reliability matters.
+### Example: How Learning Actually Persists
 
-[Full hooks documentation →](https://code.claude.com/docs/en/hooks)
+**Without hooks (CLAUDE.md only):**
+1. Week 1: You correct Claude's formatting three times
+2. Week 2: Fresh session - Claude makes the same formatting errors
+3. You correct again (CLAUDE.md doesn't guarantee persistence)
+
+**With Session Start hook:**
+1. Week 1: Corrections saved to `Working_Preferences.md`
+2. Week 2: Session Start hook loads preferences automatically
+3. Claude starts with your formatting rules already active
+4. Mistakes don't repeat
+
+This deterministic behavior is why the vibe coding community is excited about hooks. It's the difference between "Claude might remember" and "the system definitely remembers."
+
+### Which Should You Use?
+
+**Start with Cursor** - you're already set up, it works great.
+
+**Add Claude Code if you want:**
+- Guaranteed context loading every session
+- Persistent learning that truly compounds
+- Automatic person/company context injection
+- System that maintains itself reliably
+
+Many people run both - they're not exclusive. Cursor for heavy editing sessions with parallel agents. Claude Code for `/daily-plan` and automated workflows where hooks guarantee consistency. They share the same file system and CLAUDE.md context - switching is seamless.
+
+[Full hooks documentation →](https://code.claude.com/docs/en/hooks) | [Hooks deep dive in Dex →](.claude/hooks/README.md)
 
 ---
 
@@ -850,7 +877,7 @@ Obsidian is completely optional - Dex works perfectly in Cursor/terminal alone. 
 
 ## Resources
 
-- [Vibe PM Episode 8](https://youtu.be/WaqgSvL-V10?si=b2Pfwf7I5rozWCo0) — Video walkthrough
+T- [Vibe PM Episode 8](https://youtu.be/WaqgSvL-V10?si=b2Pfwf7I5rozWCo0) — Video walkthrough
 - [Companion Blog Post](https://www.linkedin.com/pulse/your-ai-chief-staff-building-personal-operating-system-dave-killeen-yxnqe/) — Deep dive on all the concepts
 - [Cursor](https://cursor.com) — The AI-powered editor
 - [Granola](https://granola.ai) — Meeting transcription (optional)

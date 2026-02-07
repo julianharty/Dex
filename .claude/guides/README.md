@@ -1,22 +1,24 @@
-# Guides
+# Guides: How Dex Actually Works
 
-**Purpose:** System documentation and conventions that explain how Dex works and how to use it effectively.
+**Purpose:** System conventions, patterns, and best practices that explain how to use Dex effectively. The "how things connect" layer.
+
+**When you'd read guides:** You want to understand how planning works (pillars → goals → priorities → tasks), how person pages aggregate context, or why tasks have unique IDs. Not required for daily use, but illuminating when you're curious.
 
 ## What Goes Here
 
-Documentation files that:
-- Explain system conventions and patterns
-- Define standards for file organization
-- Describe best practices for using Dex
-- Document architectural decisions
+Documentation that explains:
+- System conventions (how files are organized, what goes where)
+- Patterns across features (how everything connects to pillars)
+- Best practices (effective ways to use the system)
+- Design decisions (why things work the way they do)
 
-## When to Use
+## When to Create a Guide
 
-Create a guide when:
-- **System-wide pattern** - Convention applies across multiple features
-- **Reference needed** - Users or Claude need to look up standards
-- **Onboarding material** - New users need to understand core concepts
-- **Architecture docs** - Explaining how major components work together
+Add a guide when:
+- **System-wide pattern** - Convention applies across multiple features (e.g., "Every piece of work must align to a strategic pillar")
+- **Reference needed** - Users or Claude need to look up standards (e.g., "How do I structure a project file?")
+- **Conceptual explanation** - Core concept requires more than a command (e.g., "How the planning system works")
+- **Architectural context** - Explaining how major components work together (e.g., "How Work MCP keeps tasks in sync")
 
 ## Structure
 
@@ -26,13 +28,29 @@ Guides should be:
 - **Scannable** - Use clear headings and examples
 - **Linked** - Referenced from CLAUDE.md or flows
 
-## Examples
+## Examples in Dex
 
 Future guides might include:
-- Task management patterns
-- Person page best practices
-- Project tracking conventions
-- Meeting note structure
+
+- **planning-system.md** - How everything connects
+  - Strategic Pillars → Quarter Goals → Week Priorities → Daily Plans → Tasks
+  - Why work backwards from career impact
+  - How rollup tracking surfaces progress
+  
+- **person-pages.md** - Relationship intelligence patterns
+  - How person pages aggregate meetings, tasks, and context
+  - Internal vs External routing (email domain matching)
+  - When context injects automatically (hooks + person mentions)
+  
+- **task-sync.md** - Why unique IDs matter
+  - How Work MCP keeps tasks in sync everywhere
+  - Deduplication and priority limits
+  - Strategic alignment enforcement
+  
+- **career-tracking.md** - Evidence that compounds
+  - How daily work becomes documented progression
+  - Career ladder mapping and gap analysis
+  - Bidirectional flow: goals push down, evidence feeds up
 
 ## Related
 
